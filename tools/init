@@ -87,6 +87,7 @@ init_files() {
     rm -rf .github
   else
     ## Change the files of `.github`
+    git config --global --add safe.directory /github/workspace
     mv .github/workflows/$ACTIONS_WORKFLOW.hook .
     rm -rf .github
     mkdir -p .github/workflows
